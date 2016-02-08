@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,700,400italic,400,300italic,600italic);
+
+@import "reset";
+@import "variables";
+
+
+html, body {
+	height: 100%;
+	width: 100%;
+	line-height: 1.2;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;	
+}
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.main {
+	height: 100%;
+	width: 100%;
+	background-image: url(#{$imgs}mainbg.jpg);
+	background-size: cover;
+	color: $white;
+	.header {
+		
+	}
+}
+
+.logo {
+	width: 250px;
+	height: 80px;
+	background-image: url(#{$imgs}logo.png);
+	background-size: 100%;
+}
