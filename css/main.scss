@@ -4,6 +4,7 @@
 
 @import "reset";
 @import "variables";
+@import "grid";
 
 
 html, body {
@@ -17,25 +18,180 @@ a {
 	text-decoration: none;	
 }
 
+h1 {
+	font-size: 48px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 700;
+}
+
 .wrapper {
 	max-width: 960px;
 	margin: 0 auto;
 }
 
 .main {
-	height: 100%;
+	height: auto;
 	width: 100%;
 	background-image: url(#{$imgs}mainbg.jpg);
 	background-size: cover;
 	color: $white;
-	.header {
-		
+
+	.description {
+		font-size: 24px;
+		text-align: center;
+		width: 80%;
+		margin:  0 auto;
+		margin-bottom: $row-height / 2;
+	}
+
+	.video {
+		width: 634px;
+		margin: 0 auto;	
+		margin-bottom: $row-height / 2;
+	}
+
+	.contribute {
+		padding-bottom: $row-height;
+	}
+	.avaliable {
+		text-align: center;
+		font-style: italic;
+		margin-bottom: $row-height / 10;
+	}
+
+	.contribute-button {
+		display: block;
+		height: 40px;
+		width: 328px;
+		text-align: center;
+		margin: 0 auto;
+		text-transform: uppercase;
+		color: $white;
+		background-color: $color-indiegogo;
+		line-height: 40px;
+		font-weight: 700;
+		margin-bottom: $row-height / 5;
+		&:hover {
+			background-color: $color-indiegogo-hover;
+		}
+	}
+
+	.indiegogo {
+		background-image: url(#{$imgs}indiegogo.png);
+		background-size: 95px 15px;
+		width: 95px;
+		height: 15px;
+		margin: 0 auto;
+	}
+}
+
+.name-1 {
+	font-weight: 700;
+	.name-2 {
+		color: $color-teal;
+	}
+}
+
+.header {
+	padding-top: $row-height;
+	margin-bottom: $row-height;
+}
+
+nav {
+	line-height: $header-height;
+	text-align: right;
+	font-weight: 600;
+	ul {
+		li {
+			display: inline;
+			margin-left: $grid-gutter;
+			a {
+				color: $white;
+			}
+		}
 	}
 }
 
 .logo {
 	width: 250px;
-	height: 80px;
+	height: $header-height;
 	background-image: url(#{$imgs}logo.png);
 	background-size: 100%;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: $row-height / 2;
+}
+
+//--------------------------------- Our Mission ------------//
+
+.our-mission {
+	height: auto;
+	width: 100%;
+	margin-top: $row-height;
+
+	.description {
+		width: 60%;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: $row-height / 2;
+	}
+
+	.girl-img {
+		width: calc(100% - 20px);
+		height: 458px;
+		background-image: url(#{$imgs}girl.jpg);
+		background-size: 100%;
+	}
+
+	.text {
+		background-color: $color-teal;
+		margin-bottom: -4px;
+		padding: 50px;
+		color: $white;
+		h3 {
+			margin-bottom: 10px;
+			&:last-of-type {
+				margin-top: 30px;
+			}
+		}
+		p {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.quote {
+	width: 100%;
+	background-color: $color-teal;
+	color: $white;
+	font-size: 40px;
+	font-weight: 300;
+	font-style: italic;
+	padding-top: $row-height;
+
+	.text {
+		&:before {
+			content: '"';
+			display: block;
+			position: absolute;
+			left: -20px;
+		}
+	}
+
+	.author {
+		text-align: right;
+		font-size: 25px;
+	}
 }
