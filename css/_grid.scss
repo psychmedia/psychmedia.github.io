@@ -20,6 +20,18 @@
 .col-11-12 {width: $colWidth * 11;}
 .col-full {width: $colWidth * 12;}
 
+.offset-1-12 {margin-left: $colWidth;}
+.offset-2-12 {margin-left: $colWidth * 2;}
+.offset-3-12 {margin-left: $colWidth * 3;}
+.offset-4-12 {margin-left: $colWidth * 4;}
+.offset-5-12 {margin-left: $colWidth * 5;}
+.offset-6-12 {margin-left: $colWidth * 6;}
+.offset-7-12 {margin-left: $colWidth * 7;}
+.offset-8-12 {margin-left: $colWidth * 8;}
+.offset-9-12 {margin-left: $colWidth * 9;}
+.offset-10-12 {margin-left: $colWidth * 10;}
+.offset-11-12 {margin-left: $colWidth * 11;}
+
 .row {
     width: 100%;
     display: inline-block;

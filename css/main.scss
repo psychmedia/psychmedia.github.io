@@ -18,6 +18,10 @@ a {
 	text-decoration: none;	
 }
 
+b {
+	font-weight: 700;
+}
+
 h1 {
 	font-size: 48px;
 	font-weight: 700;
@@ -26,6 +30,7 @@ h1 {
 h2 {
 	font-size: 36px;
 	font-weight: 700;
+	text-align: center;
 }
 
 h3 {
@@ -54,8 +59,6 @@ h3 {
 	}
 
 	.video {
-		width: 634px;
-		margin: 0 auto;	
 		margin-bottom: $row-height / 2;
 	}
 
@@ -92,6 +95,11 @@ h3 {
 		height: 15px;
 		margin: 0 auto;
 	}
+}
+
+.video {
+	width: 634px;
+	margin: 0 auto;	
 }
 
 .name-1 {
@@ -180,6 +188,7 @@ nav {
 	font-weight: 300;
 	font-style: italic;
 	padding-top: $row-height;
+	padding-bottom: $row-height;
 
 	.text {
 		&:before {
@@ -193,5 +202,146 @@ nav {
 	.author {
 		text-align: right;
 		font-size: 25px;
+		margin-top: 15px;
+	}
+}
+
+//----------------------How It Works-----/
+.how-it-works {
+	margin-top: $row-height;
+
+	.undercaption {
+		font-style: italic;
+		text-align: center;
+		width: 65%;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: $row-height;
+	}
+}
+
+.team {
+	margin-top: $row-height;	
+	margin-bottom: $row-height;
+	text-align: center;
+	.description {
+		width: 60%;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: $row-height / 2;
+		margin-bottom: $row-height / 2;
+	}
+	.row {
+		&.main-team {
+			margin-bottom: $row-height;
+			.name {
+				margin-top: $row-height / 2;
+			}
+		}
+	}
+	.avatar {
+		display: block;
+		width: 200px;
+		height: 200px;
+		background-size: 100%;
+		margin: 0 auto;
+		&.jen {
+			background-image: url(#{$imgs}jennifer.png);			
+		}
+		&.sharon {
+			background-image: url(#{$imgs}sharon.png);
+		}
+		&.david {
+			background-image: url(#{$imgs}david.png);
+		}
+	}
+	.name {
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-top: $row-height / 1.5;
+		margin-bottom: $row-height / 2;
+	}
+	.post {
+		font-style: italic;
+		margin-bottom: $row-height / 2;
+	}
+	.col-4-12 {
+		padding-left: 5px;
+		padding-right: 5px;
+		&.offset {
+			height: 1px; //hack
+		}
+	}
+	.consult {
+		margin-top: $row-height;
+	}
+}
+
+.contact {
+	margin-top: $row-height;
+	margin-bottom: $row-height;
+	h2 {
+		margin-bottom: $row-height / 2;
+	}
+	input {
+		width: 100%;
+		height: $row-height / 1.5;
+		margin-bottom: $row-height / 5;
+		padding-left: 10px;
+		padding-right: 10px;
+		border: 1px solid $border-color;
+		background-color: $input-bg;
+		transition: background-color 0.5s ease;
+		&:focus {
+			background-color: $white;
+			transition: background-color 0.5s ease;
+		}
+		&[type=submit] {
+			font-size: 16px;
+		}
+	}
+	textarea {
+		max-width: 100%;
+		width: 100%;
+		padding: 10px;
+		height: $row-height * 2;
+		border: 1px solid $border-color;
+		background-color: $input-bg;
+		margin-bottom: $row-height / 5;
+		transition: background-color 0.5s ease;
+		&:focus {
+			transition: background-color 0.5s ease;
+			background-color: $white;
+		}
+	}
+}
+
+.footer {
+	color: $white;
+	background-color: $color-teal;
+	padding-top: $row-height * 2;
+	padding-bottom: $row-height * 2;
+	.logo {
+		width: 250px;
+		height: $header-height;
+		background-image: url(#{$imgs}logo-white.png);
+		background-size: 100%;
+	}
+	.copyright {
+		margin-top: $row-height / 2;
+	}
+	.creator {
+		margin-top: $row-height / 10;
+	}
+	nav {
+		margin-top: $row-height / 2;
+		line-height: 1;
+		text-align: left;
+		ul {
+			li {
+				margin-left: 0;
+				margin-right: 20px;
+			}
+		}
 	}
 }
