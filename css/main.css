@@ -71,6 +71,7 @@ input, textarea { font-family: "Open Sans", sans-serif; }
 html, body { height: 100%; width: 100%; line-height: 1.2; font-family: 'Open Sans', sans-serif; }
 
 a { text-decoration: none; }
+a:hover { border-bottom: 2px solid white; }
 
 b { font-weight: 700; }
 
@@ -87,7 +88,7 @@ h3 { font-size: 18px; font-weight: 700; }
 .main .video { margin-bottom: 25px; }
 .main .contribute { padding-bottom: 50px; }
 .main .avaliable { text-align: center; font-style: italic; margin-bottom: 5px; }
-.main .contribute-button { display: block; height: 40px; width: 328px; text-align: center; margin: 0 auto; text-transform: uppercase; color: #ffffff; background-color: #eb1478; line-height: 40px; font-weight: 700; margin-bottom: 10px; }
+.main .contribute-button { display: block; height: 40px; width: 328px; text-align: center; margin: 0 auto; text-transform: uppercase; color: #ffffff; background-color: #eb1478; line-height: 40px; font-weight: 700; border: none; margin-bottom: 10px; }
 .main .contribute-button:hover { background-color: #fa1681; }
 .main .indiegogo { background-image: url(../images/indiegogo.png); background-size: 95px 15px; width: 95px; height: 15px; margin: 0 auto; }
 
@@ -119,7 +120,13 @@ nav ul li a { color: #ffffff; }
 .quote .author { text-align: right; font-size: 25px; margin-top: 15px; }
 
 .how-it-works { margin-top: 50px; }
+.how-it-works h2 { margin-bottom: 25px; }
 .how-it-works .undercaption { font-style: italic; text-align: center; width: 65%; margin: 0 auto; margin-top: 20px; margin-bottom: 50px; }
+.how-it-works .pic { width: 100px; height: 100px; background-size: 100%; margin: 0 auto; }
+.how-it-works .pic.play { background-image: url(../images/pic1.svg); }
+.how-it-works .pic.social { background-image: url(../images/pic2.svg); width: 198px; }
+.how-it-works .pic.data { background-image: url(../images/pic3.svg); width: 105px; }
+.how-it-works .text { width: 50%; text-align: center; margin: 0 auto; margin-top: 25px; margin-bottom: 25px; }
 
 .team { margin-top: 50px; margin-bottom: 50px; text-align: center; }
 .team .description { width: 60%; text-align: center; margin: 0 auto; margin-top: 25px; margin-bottom: 25px; }
@@ -145,7 +152,20 @@ nav ul li a { color: #ffffff; }
 
 .footer { color: #ffffff; background-color: #009688; padding-top: 100px; padding-bottom: 100px; }
 .footer .logo { width: 250px; height: 80px; background-image: url(../images/logo-white.png); background-size: 100%; }
-.footer .copyright { margin-top: 25px; }
-.footer .creator { margin-top: 5px; }
+.footer .copyright { margin-top: 25px; color: #c3c3c3; }
+.footer .copyright span { color: #ffffff; }
+.footer .creator { margin-top: 5px; color: #c3c3c3; }
+.footer .creator a { font-weight: 700; color: inherit; }
+@-webkit-keyframes colours { 0% { color: inherit; }
+  25% { color: #673AB7; }
+  50% { color: #FFC107; }
+  75% { color: #03A9F4; }
+  100% { color: inherit; } }
+.footer .creator a:hover { -webkit-animation-direction: normal; -webkit-animation-duration: 5s; -webkit-animation-iteration-count: infinite; -webkit-animation-name: colours; -webkit-animation-timing-function: ease; -moz-animation-direction: normal; -moz-animation-duration: 5s; -moz-animation-iteration-count: infinite; -moz-animation-name: colours; -moz-animation-timing-function: ease; }
 .footer nav { margin-top: 25px; line-height: 1; text-align: left; }
 .footer nav ul li { margin-left: 0; margin-right: 20px; }
+.footer .facebook { margin-top: 25px; width: 30px; height: 30px; }
+.footer .facebook svg { height: 100%; width: 100%; fill: #c3c3c3; -webkit-transition: fill .33s ease; transition: fill .33s ease; }
+.footer .facebook svg:hover { fill: #ffffff; -webkit-transition: all .33s ease; transition: all .33s ease; }
+
+.layer2 { background-color: #eb1478; width: 100%; height: 300px; }

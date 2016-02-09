@@ -16,6 +16,9 @@ html, body {
 
 a {
 	text-decoration: none;	
+	&:hover {
+		border-bottom: 2px solid white;
+	}
 }
 
 b {
@@ -82,6 +85,7 @@ h3 {
 		background-color: $color-indiegogo;
 		line-height: 40px;
 		font-weight: 700;
+		border: none;
 		margin-bottom: $row-height / 5;
 		&:hover {
 			background-color: $color-indiegogo-hover;
@@ -210,6 +214,10 @@ nav {
 .how-it-works {
 	margin-top: $row-height;
 
+	h2 {
+		margin-bottom: $row-height / 2;
+	}
+
 	.undercaption {
 		font-style: italic;
 		text-align: center;
@@ -217,6 +225,30 @@ nav {
 		margin: 0 auto;
 		margin-top: 20px;
 		margin-bottom: $row-height;
+	}
+	.pic {
+		width: 100px;
+		height: 100px;
+		background-size: 100%;
+		margin: 0 auto;
+		&.play {
+			background-image: url(#{$imgs}pic1.svg);
+		}
+		&.social {
+			background-image: url(#{$imgs}pic2.svg);
+			width: 198px;
+		}
+		&.data {
+			background-image: url(#{$imgs}pic3.svg);
+			width: 105px;
+		}
+	}
+	.text {
+		width: 50%;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: $row-height / 2;
+		margin-bottom: $row-height / 2;
 	}
 }
 
@@ -329,9 +361,44 @@ nav {
 	}
 	.copyright {
 		margin-top: $row-height / 2;
+		color: $text-muted;
+		span {
+			color: $white;
+		}
 	}
 	.creator {
 		margin-top: $row-height / 10;
+		color: $text-muted;
+		a {
+			font-weight: 700;
+			color: inherit;
+			@-webkit-keyframes colours {
+				0% {color: inherit;}
+				25% {color: #673AB7;}
+				50% {color: #FFC107;}
+				75% {color: #03A9F4;}
+				100% {color: inherit;}
+			}
+			@-moz-keyframes colours {
+				0% {color: inherit;}
+				25% {color: #673AB7;}
+				50% {color: #FFC107;}
+				75% {color: #03A9F4;}
+				100% {color: inherit;}
+			}
+			&:hover {
+				-webkit-animation-direction: normal;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-name: colours;
+				-webkit-animation-timing-function: ease;
+				-moz-animation-direction: normal;
+				-moz-animation-duration: 5s;
+				-moz-animation-iteration-count: infinite;
+				-moz-animation-name: colours;
+				-moz-animation-timing-function: ease;
+			}
+		}
 	}
 	nav {
 		margin-top: $row-height / 2;
@@ -344,4 +411,25 @@ nav {
 			}
 		}
 	}
+	.facebook {
+		margin-top: $row-height / 2;
+		width: 30px;
+		height: 30px;
+		svg {
+			height: 100%;
+			width: 100%;
+			fill: $text-muted;
+			transition: fill .33s ease;
+			&:hover {
+				fill: $white;
+				transition: all .33s ease;
+			}
+		}
+	}
+}
+
+.layer2 {
+	background-color: $color-indiegogo;
+	width: 100%;
+	height: 300px;
 }
