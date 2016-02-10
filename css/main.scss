@@ -43,6 +43,7 @@ h3 {
 
 .wrapper {
 	max-width: 960px;
+	min-width: 960px;
 	margin: 0 auto;
 }
 
@@ -453,7 +454,6 @@ nav {
 		width: 700px;
 		//margin: 0 auto;
 		font-size: 21px;
-
 		font-family: Georgia, Cambria,"Times New Roman",Times,serif;
 		p {
 			font-family: inherit;
