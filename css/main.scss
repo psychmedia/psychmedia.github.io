@@ -17,7 +17,7 @@ html, body {
 a {
 	text-decoration: none;	
 	&:hover {
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid $white;
 	}
 }
 
@@ -428,8 +428,60 @@ nav {
 	}
 }
 
-.layer2 {
-	background-color: $color-indiegogo;
-	width: 100%;
-	height: 300px;
+//-------------- Cookies Page -----------------------//
+.cookies {
+	color: $black;
+	margin-bottom: $row-height * 2;
+	.logo {
+		background-image: url(#{$imgs}logo-black.png);
+	}
+	h2 {
+		text-align: left;
+		margin-top: 56px;
+	}
+
+	h3 {
+		margin-top: 30px;
+		color: rgba(0,0,0,0.44);
+		font-size: 28px;
+	}
+	.italic {
+		font-style: italic;
+		margin-top: 29px;
+	}
+	.content {
+		width: 700px;
+		//margin: 0 auto;
+		font-size: 21px;
+
+		font-family: Georgia, Cambria,"Times New Roman",Times,serif;
+		p {
+			font-family: inherit;
+			line-height: 1.58;
+			letter-spacing: -0.003em;
+			margin-top: 29px;
+		}
+		ul {
+			font-family: inherit;
+			list-style: disc inside none;
+			li {
+				font-family: inherit;
+				line-height: 1.58;
+				letter-spacing: -0.003em;
+			}
+		}
+	}
+	nav {
+		ul {
+			li {
+				a {
+					color: $black;
+					&:hover {
+						border-bottom: 2px solid $black;
+					}
+				}
+			}
+		}
+	}
 }
+
