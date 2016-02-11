@@ -167,7 +167,7 @@ nav ul li a { color: #ffffff; }
 .footer .twitter svg { height: 100%; width: 100%; fill: #c3c3c3; -webkit-transition: fill .33s ease; transition: fill .33s ease; }
 .footer .twitter svg:hover { fill: #ffffff; -webkit-transition: all .33s ease; transition: all .33s ease; }
 
-.cookies { color: #000000; margin-bottom: 100px; }
+.cookies { color: #000000; margin-bottom: 100px; margin-top: 50px; }
 .cookies .logo { background-image: url(../images/logo-black.png); }
 .cookies h2 { text-align: left; margin-top: 56px; }
 .cookies h3 { margin-top: 30px; color: rgba(0, 0, 0, 0.44); font-size: 28px; }

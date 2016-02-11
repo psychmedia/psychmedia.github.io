@@ -433,6 +433,7 @@ nav {
 .cookies {
 	color: $black;
 	margin-bottom: $row-height * 2;
+	margin-top: $row-height;
 	.logo {
 		background-image: url(#{$imgs}logo-black.png);
 	}
