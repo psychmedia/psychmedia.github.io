@@ -177,7 +177,7 @@ nav ul li a { color: #ffffff; }
 .cookies h2 { text-align: left; margin-top: 56px; }
 .cookies h3 { margin-top: 30px; color: rgba(0, 0, 0, 0.44); font-size: 28px; }
 .cookies .italic { font-style: italic; margin-top: 29px; }
-.cookies .content { width: 700px; font-size: 21px; font-family: Georgia, Cambria,"Times New Roman",Times,serif; }
+.cookies .content { width: 700px; margin: 0 auto; font-size: 21px; font-family: Georgia, Cambria,"Times New Roman",Times,serif; }
 .cookies .content p { font-family: inherit; line-height: 1.58; letter-spacing: -0.003em; margin-top: 29px; }
 .cookies .content ul { font-family: inherit; list-style: disc inside none; }
 .cookies .content ul li { font-family: inherit; line-height: 1.58; letter-spacing: -0.003em; }
@@ -185,3 +185,24 @@ nav ul li a { color: #ffffff; }
 .cookies nav ul li a:hover { border-bottom: 2px solid #000000; }
 
 .fb-like { margin-top: 25px; }
+
+.modal { display: block; width: 100%; }
+
+.modal > label { cursor: pointer; display: inline-block; margin-top: 25px; line-height: 1; font-weight: 600; padding-bottom: 3px; height: 22px; z-index: 998; }
+
+.modal > label:hover { border-bottom: 2px solid white; }
+
+.modal input { display: none; position: absolute; right: 100px; top: 30px; z-index: -10; }
+
+.modal__overlay { background: white; bottom: 0; left: 0; position: fixed; right: 0; top: 0; z-index: -800; }
+
+.modal__box { padding: 1em .75em; position: relative; margin: 1em auto; }
+
+@media (min-width: 50em) { .modal__box { padding: 1.75em; } }
+.modal__box label { color: black; cursor: pointer; display: inline-block; position: relative; height: 2em; width: 5em; margin-top: 25px; }
+
+.modal__overlay { opacity: 0; visibility: hidden; overflow: hidden; -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(1.7); -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+
+input:checked ~ .modal__overlay { opacity: 1; visibility: visible; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); z-index: 3500; overflow-y: scroll; }
+
+input:focus + label { -webkit-transform: scale(0.97); -ms-transform: scale(0.97); transform: scale(0.97); }
