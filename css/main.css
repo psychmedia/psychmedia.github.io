@@ -164,9 +164,12 @@ nav ul li a { color: #ffffff; }
 .footer .creator a:hover { -webkit-animation-direction: normal; -webkit-animation-duration: 5s; -webkit-animation-iteration-count: infinite; -webkit-animation-name: colours; -webkit-animation-timing-function: ease; -moz-animation-direction: normal; -moz-animation-duration: 5s; -moz-animation-iteration-count: infinite; -moz-animation-name: colours; -moz-animation-timing-function: ease; }
 .footer nav { margin-top: 25px; line-height: 1; text-align: left; }
 .footer nav ul li { margin-left: 0; margin-right: 20px; }
-.footer .facebook { margin-top: 25px; width: 30px; height: 30px; }
+.footer .facebook { margin-top: 25px; width: 30px; height: 30px; float: left; }
 .footer .facebook svg { height: 100%; width: 100%; fill: #c3c3c3; -webkit-transition: fill .33s ease; transition: fill .33s ease; }
 .footer .facebook svg:hover { fill: #ffffff; -webkit-transition: all .33s ease; transition: all .33s ease; }
+.footer .twitter { margin-top: 25px; width: 30px; height: 30px; float: left; margin-left: 10px; }
+.footer .twitter svg { height: 100%; width: 100%; fill: #c3c3c3; -webkit-transition: fill .33s ease; transition: fill .33s ease; }
+.footer .twitter svg:hover { fill: #ffffff; -webkit-transition: all .33s ease; transition: all .33s ease; }
 
 .cookies { color: #000000; margin-bottom: 100px; }
 .cookies .logo { background-image: url(../images/logo-black.png); }
@@ -179,3 +182,5 @@ nav ul li a { color: #ffffff; }
 .cookies .content ul li { font-family: inherit; line-height: 1.58; letter-spacing: -0.003em; }
 .cookies nav ul li a { color: #000000; }
 .cookies nav ul li a:hover { border-bottom: 2px solid #000000; }
+
+.fb-like { margin-top: 25px; }
