@@ -156,12 +156,7 @@ nav ul li a { color: #ffffff; }
 .footer .copyright span { color: #ffffff; }
 .footer .creator { margin-top: 5px; color: #c3c3c3; }
 .footer .creator a { font-weight: 700; color: inherit; }
-@-webkit-keyframes colours { 0% { color: inherit; }
-  25% { color: #673AB7; }
-  50% { color: #FFC107; }
-  75% { color: #03A9F4; }
-  100% { color: inherit; } }
-.footer .creator a:hover { -webkit-animation-direction: normal; -webkit-animation-duration: 5s; -webkit-animation-iteration-count: infinite; -webkit-animation-name: colours; -webkit-animation-timing-function: ease; -moz-animation-direction: normal; -moz-animation-duration: 5s; -moz-animation-iteration-count: infinite; -moz-animation-name: colours; -moz-animation-timing-function: ease; }
+.footer .creator a:hover { color: #ffffff; }
 .footer nav { margin-top: 25px; line-height: 1; text-align: left; }
 .footer nav ul li { margin-left: 0; margin-right: 20px; }
 .footer .socials { height: 55px; }

@@ -373,31 +373,8 @@ nav {
 		a {
 			font-weight: 700;
 			color: inherit;
-			@-webkit-keyframes colours {
-				0% {color: inherit;}
-				25% {color: #673AB7;}
-				50% {color: #FFC107;}
-				75% {color: #03A9F4;}
-				100% {color: inherit;}
-			}
-			@-moz-keyframes colours {
-				0% {color: inherit;}
-				25% {color: #673AB7;}
-				50% {color: #FFC107;}
-				75% {color: #03A9F4;}
-				100% {color: inherit;}
-			}
 			&:hover {
-				-webkit-animation-direction: normal;
-				-webkit-animation-duration: 5s;
-				-webkit-animation-iteration-count: infinite;
-				-webkit-animation-name: colours;
-				-webkit-animation-timing-function: ease;
-				-moz-animation-direction: normal;
-				-moz-animation-duration: 5s;
-				-moz-animation-iteration-count: infinite;
-				-moz-animation-name: colours;
-				-moz-animation-timing-function: ease;
+				color: $white;
 			}
 		}
 	}
