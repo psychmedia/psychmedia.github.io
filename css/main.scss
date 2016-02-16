@@ -796,3 +796,11 @@ input:focus + label {
   -ms-transform: scale(0.97);
   transform: scale(0.97);
 }
+
+.advsrs {
+	@include respond-to(sm) {
+		.col-4-12 {
+			width: 100%;
+		}
+	}
+}

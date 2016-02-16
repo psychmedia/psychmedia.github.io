@@ -243,3 +243,5 @@ nav ul li a { color: #ffffff; }
 input:checked ~ .modal__overlay { opacity: 1; visibility: visible; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); z-index: 3500; overflow-y: scroll; }
 
 input:focus + label { -webkit-transform: scale(0.97); -ms-transform: scale(0.97); transform: scale(0.97); }
+
+@media only screen and (max-width: 980px) { .advsrs .col-4-12 { width: 100%; } }
