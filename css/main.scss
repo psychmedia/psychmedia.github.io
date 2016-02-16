@@ -28,6 +28,9 @@ b {
 h1 {
 	font-size: 48px;
 	font-weight: 700;
+	@include respond-to(sm) {
+		font-size: 36px;
+	}
 }
 
 h2 {
@@ -45,6 +48,31 @@ h3 {
 	max-width: 960px;
 	min-width: 960px;
 	margin: 0 auto;
+	@include respond-to(sm) {
+		max-width: 100%;
+		min-width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.full-mob {
+	@include respond-to(sm) {
+		width: 100%;
+	}
+}
+
+.hide-full {
+	display: none;
+	@include respond-to(sm) {
+		display: block;
+	}
+}
+
+.hide-mob {
+	@include respond-to(sm) {
+		display: none;
+	}
 }
 
 .main {
@@ -60,10 +88,19 @@ h3 {
 		width: 80%;
 		margin:  0 auto;
 		margin-bottom: $row-height / 2;
+		@include respond-to(sm) {
+			width: 100%;
+		}
 	}
 
 	.video {
 		margin-bottom: $row-height / 2;
+		@include respond-to(sm) {
+			width: 100%;
+			iframe {
+				width: 100%;
+			}
+		}
 	}
 
 	.contribute {
@@ -78,7 +115,7 @@ h3 {
 	.contribute-button {
 		display: block;
 		height: 40px;
-		width: 328px;
+		width: 33%; //328px;
 		text-align: center;
 		margin: 0 auto;
 		text-transform: uppercase;
@@ -90,6 +127,9 @@ h3 {
 		margin-bottom: $row-height / 5;
 		&:hover {
 			background-color: $color-indiegogo-hover;
+		}
+		@include respond-to(sm) {
+			min-width: 280px;
 		}
 	}
 
@@ -105,6 +145,12 @@ h3 {
 .video {
 	width: 634px;
 	margin: 0 auto;	
+	@include respond-to(sm) {
+		width: 100%;
+		iframe {
+			width: 100%;
+		}
+	}
 }
 
 .name-1 {
@@ -117,6 +163,14 @@ h3 {
 .header {
 	padding-top: $row-height;
 	margin-bottom: $row-height;
+	@include respond-to(sm) {
+		.col-3-12 {
+			width: calc(100% - 153px);
+		}
+		.col-9-12 {
+			width: 153px;
+		}
+	}
 }
 
 nav {
@@ -133,12 +187,98 @@ nav {
 		}
 	}
 }
+/////
+
+@include respond-to(sm) {
+	.nav {
+		position: relative;
+		//min-height: 40px;
+		width: 153px;
+		height: 25px;
+		
+		//background-size: 100%;
+		line-height: 100%;
+		margin-top: 24px;
+	}	
+	.nav ul {
+		width: 153px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		//margin-left: -115px;
+		margin-top: -8px;
+		background: $color-teal;
+		z-index: 20;
+		//border: solid 1px #aaa;
+		//background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
+		//border-radius: 5px;
+		//box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* show only current <li> item */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 5px;
+		text-align: center;
+	}
+	.nav .current a {
+		//background: none;
+		//color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		//background: url(images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* right nav */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* center nav */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+	
+}
+
+@include respond-to(smm) {
+	.nav {
+		//margin: 0 auto;
+		//margin-top: 20px;
+		ul {
+			margin-left: 0;
+		}
+	}
+}
+//////
 
 .logo {
 	width: 250px;
 	height: $header-height;
 	background-image: url(#{$imgs}logo.png);
 	background-size: 100%;
+	@include respond-to(smm) {
+		width: 125px;
+		height: 40px;
+		margin-top: 14px;
+	}
 }
 
 .title {
@@ -158,6 +298,9 @@ nav {
 		text-align: center;
 		margin: 0 auto;
 		margin-bottom: $row-height / 2;
+		@include respond-to(sm) {
+			width: 100%;
+		}
 	}
 
 	.girl-img {
@@ -165,6 +308,15 @@ nav {
 		height: 458px;
 		background-image: url(#{$imgs}girl.jpg);
 		background-size: 100%;
+		@include respond-to(sm) {
+			display: none;
+		}
+	}
+
+	.problem {
+		@include respond-to(sm) {
+			width: 100%;
+		}
 	}
 
 	.text {
@@ -181,6 +333,12 @@ nav {
 		p {
 			margin-top: 10px;
 			margin-bottom: 10px;
+		}
+		@include respond-to(sm) {
+			width: 90%;
+			margin: 0 auto;
+			padding: 35px;
+			margin-bottom: -4px;
 		}
 	}
 }
@@ -209,6 +367,12 @@ nav {
 		font-size: 25px;
 		margin-top: 15px;
 	}
+	@include respond-to(sm) {
+		font-size: 30px;
+		.author {
+			font-size: 18px;
+		}
+	}
 }
 
 //----------------------How It Works-----/
@@ -226,6 +390,9 @@ nav {
 		margin: 0 auto;
 		margin-top: 20px;
 		margin-bottom: $row-height;
+		@include respond-to(sm) {
+			width: 100%;
+		}
 	}
 	.pic {
 		width: 100px;
@@ -257,16 +424,26 @@ nav {
 	margin-top: $row-height;	
 	margin-bottom: $row-height;
 	text-align: center;
+
+	.full-mob {
+		margin-bottom: $row-height;
+	}
 	.description {
 		width: 60%;
 		text-align: center;
 		margin: 0 auto;
 		margin-top: $row-height / 2;
 		margin-bottom: $row-height / 2;
+		@include respond-to(sm) {
+			width: 100%;
+		}
 	}
 	.row {
 		&.main-team {
 			margin-bottom: $row-height;
+			@include respond-to(sm) {
+				margin-bottom: 0;
+			}
 			.name {
 				margin-top: $row-height / 2;
 			}
@@ -286,6 +463,9 @@ nav {
 		}
 		&.david {
 			background-image: url(#{$imgs}david.png);
+		}
+		&.teen {
+			background-image: url(#{$imgs}teen.png);
 		}
 	}
 	.name {

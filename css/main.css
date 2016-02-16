@@ -76,52 +76,90 @@ a:hover { border-bottom: 2px solid #ffffff; }
 b { font-weight: 700; }
 
 h1 { font-size: 48px; font-weight: 700; }
+@media only screen and (max-width: 980px) { h1 { font-size: 36px; } }
 
 h2 { font-size: 36px; font-weight: 700; text-align: center; }
 
 h3 { font-size: 18px; font-weight: 700; }
 
 .wrapper { max-width: 960px; min-width: 960px; margin: 0 auto; }
+@media only screen and (max-width: 980px) { .wrapper { max-width: 100%; min-width: 100%; padding-left: 20px; padding-right: 20px; } }
+
+@media only screen and (max-width: 980px) { .full-mob { width: 100%; } }
+
+.hide-full { display: none; }
+@media only screen and (max-width: 980px) { .hide-full { display: block; } }
+
+@media only screen and (max-width: 980px) { .hide-mob { display: none; } }
 
 .main { height: auto; width: 100%; background-image: url(../images/mainbg.jpg); background-size: cover; color: #ffffff; }
 .main .description { font-size: 24px; text-align: center; width: 80%; margin: 0 auto; margin-bottom: 25px; }
+@media only screen and (max-width: 980px) { .main .description { width: 100%; } }
 .main .video { margin-bottom: 25px; }
+@media only screen and (max-width: 980px) { .main .video { width: 100%; }
+  .main .video iframe { width: 100%; } }
 .main .contribute { padding-bottom: 50px; }
 .main .avaliable { text-align: center; font-style: italic; margin-bottom: 5px; }
-.main .contribute-button { display: block; height: 40px; width: 328px; text-align: center; margin: 0 auto; text-transform: uppercase; color: #ffffff; background-color: #eb1478; line-height: 40px; font-weight: 700; border: none; margin-bottom: 10px; }
+.main .contribute-button { display: block; height: 40px; width: 33%; text-align: center; margin: 0 auto; text-transform: uppercase; color: #ffffff; background-color: #eb1478; line-height: 40px; font-weight: 700; border: none; margin-bottom: 10px; }
 .main .contribute-button:hover { background-color: #fa1681; }
+@media only screen and (max-width: 980px) { .main .contribute-button { min-width: 280px; } }
 .main .indiegogo { background-image: url(../images/indiegogo.png); background-size: 95px 15px; width: 95px; height: 15px; margin: 0 auto; }
 
 .video { width: 634px; margin: 0 auto; }
+@media only screen and (max-width: 980px) { .video { width: 100%; }
+  .video iframe { width: 100%; } }
 
 .name-1 { font-weight: 700; }
 .name-1 .name-2 { color: #009688; }
 
 .header { padding-top: 50px; margin-bottom: 50px; }
+@media only screen and (max-width: 980px) { .header .col-3-12 { width: calc(100% - 153px); }
+  .header .col-9-12 { width: 153px; } }
 
 nav { line-height: 80px; text-align: right; font-weight: 600; }
 nav ul li { display: inline; margin-left: 20px; }
 nav ul li a { color: #ffffff; }
 
+@media only screen and (max-width: 980px) { .nav { position: relative; width: 153px; height: 25px; line-height: 100%; margin-top: 24px; }
+  .nav ul { width: 153px; padding: 5px 0; position: absolute; top: 0; left: 0; margin-top: -8px; background: #009688; z-index: 20; }
+  .nav li { display: none; /* hide all <li> items */ margin: 0; }
+  .nav .current { display: block /* show only current <li> item */ }
+  .nav a { display: block; padding: 5px 5px 5px 5px; text-align: center; }
+  /* on nav hover */
+  .nav ul:hover { background-image: none; }
+  .nav ul:hover li { display: block; margin: 0 0 5px; }
+  /* right nav */
+  .nav.right ul { left: auto; right: 0; }
+  /* center nav */
+  .nav.center ul { left: 50%; margin-left: -90px; } }
+@media only screen and (max-width: 450px) { .nav ul { margin-left: 0; } }
 .logo { width: 250px; height: 80px; background-image: url(../images/logo.png); background-size: 100%; }
+@media only screen and (max-width: 450px) { .logo { width: 125px; height: 40px; margin-top: 14px; } }
 
 .title { text-align: center; margin-bottom: 25px; }
 
 .our-mission { height: auto; width: 100%; margin-top: 50px; }
 .our-mission .description { width: 60%; text-align: center; margin: 0 auto; margin-bottom: 25px; }
+@media only screen and (max-width: 980px) { .our-mission .description { width: 100%; } }
 .our-mission .girl-img { width: calc(100% - 20px); height: 458px; background-image: url(../images/girl.jpg); background-size: 100%; }
+@media only screen and (max-width: 980px) { .our-mission .girl-img { display: none; } }
+@media only screen and (max-width: 980px) { .our-mission .problem { width: 100%; } }
 .our-mission .text { background-color: #009688; margin-bottom: -4px; padding: 50px; color: #ffffff; }
 .our-mission .text h3 { margin-bottom: 10px; }
 .our-mission .text h3:last-of-type { margin-top: 30px; }
 .our-mission .text p { margin-top: 10px; margin-bottom: 10px; }
+@media only screen and (max-width: 980px) { .our-mission .text { width: 90%; margin: 0 auto; padding: 35px; margin-bottom: -4px; } }
 
 .quote { width: 100%; background-color: #009688; color: #ffffff; font-size: 40px; font-weight: 300; font-style: italic; padding-top: 50px; padding-bottom: 50px; }
 .quote .text:before { content: '"'; display: block; position: absolute; left: -20px; }
 .quote .author { text-align: right; font-size: 25px; margin-top: 15px; }
+@media only screen and (max-width: 980px) { .quote { font-size: 30px; }
+  .quote .author { font-size: 18px; } }
 
 .how-it-works { margin-top: 50px; }
 .how-it-works h2 { margin-bottom: 25px; }
 .how-it-works .undercaption { font-style: italic; text-align: center; width: 65%; margin: 0 auto; margin-top: 20px; margin-bottom: 50px; }
+@media only screen and (max-width: 980px) { .how-it-works .undercaption { width: 100%; } }
 .how-it-works .pic { width: 100px; height: 100px; background-size: 100%; margin: 0 auto; }
 .how-it-works .pic.play { background-image: url(../images/pic1.svg); }
 .how-it-works .pic.social { background-image: url(../images/pic2.svg); width: 198px; }
@@ -129,13 +167,17 @@ nav ul li a { color: #ffffff; }
 .how-it-works .text { width: 50%; text-align: center; margin: 0 auto; margin-top: 25px; margin-bottom: 25px; }
 
 .team { margin-top: 50px; margin-bottom: 50px; text-align: center; }
+.team .full-mob { margin-bottom: 50px; }
 .team .description { width: 60%; text-align: center; margin: 0 auto; margin-top: 25px; margin-bottom: 25px; }
+@media only screen and (max-width: 980px) { .team .description { width: 100%; } }
 .team .row.main-team { margin-bottom: 50px; }
+@media only screen and (max-width: 980px) { .team .row.main-team { margin-bottom: 0; } }
 .team .row.main-team .name { margin-top: 25px; }
 .team .avatar { display: block; width: 200px; height: 200px; background-size: 100%; margin: 0 auto; }
 .team .avatar.jen { background-image: url(../images/jennifer.png); }
 .team .avatar.sharon { background-image: url(../images/sharon.png); }
 .team .avatar.david { background-image: url(../images/david.png); }
+.team .avatar.teen { background-image: url(../images/teen.png); }
 .team .name { text-transform: uppercase; font-weight: 700; margin-top: 33.33333px; margin-bottom: 25px; }
 .team .post { font-style: italic; margin-bottom: 25px; }
 .team .col-4-12 { padding-left: 5px; padding-right: 5px; }
