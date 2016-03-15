@@ -75,6 +75,19 @@ h3 {
 	}
 }
 
+.main-press {
+	height: auto;
+	width: 100%;
+	//background-image: url(#{$imgs}mainbg.jpg);
+	background-size: cover;
+	.nav a {
+		color: black;
+		&:hover {
+			border-bottom: 2px solid black;
+		}
+	}
+}
+
 .main {
 	height: auto;
 	width: 100%;
@@ -195,7 +208,6 @@ nav {
 		//min-height: 40px;
 		width: 153px;
 		height: 25px;
-		
 		//background-size: 100%;
 		line-height: 100%;
 		margin-top: 24px;
@@ -223,6 +235,10 @@ nav {
 		display: block; /* show only current <li> item */
 	}
 	.nav a {
+		color: $white !important;
+		&:hover {
+			border-bottom: 2px solid $white !important;
+		}
 		display: block;
 		padding: 5px 5px 5px 5px;
 		text-align: center;
@@ -278,6 +294,9 @@ nav {
 		width: 125px;
 		height: 40px;
 		margin-top: 14px;
+	}
+	&.logo-black {
+		background-image: url(#{$imgs}logo-black.png);
 	}
 }
 
@@ -801,6 +820,25 @@ input:focus + label {
 	@include respond-to(sm) {
 		.col-4-12 {
 			width: 100%;
+		}
+	}
+}
+
+.press-logos {
+	margin-top: $row-height * 2;
+	margin-bottom: $row-height;
+	img {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+	.press-logo {
+		//width: 20%;
+		//float: left;
+	}
+	@include respond-to(smm) {
+		.col-3-12 {
+			width: 50% !important;
 		}
 	}
 }

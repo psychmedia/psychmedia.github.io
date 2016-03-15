@@ -92,6 +92,10 @@ h3 { font-size: 18px; font-weight: 700; }
 
 @media only screen and (max-width: 980px) { .hide-mob { display: none; } }
 
+.main-press { height: auto; width: 100%; background-size: cover; }
+.main-press .nav a { color: black; }
+.main-press .nav a:hover { border-bottom: 2px solid black; }
+
 .main { height: auto; width: 100%; background-image: url(../images/mainbg.jpg); background-size: cover; color: #ffffff; }
 .main .description { font-size: 24px; text-align: center; width: 80%; margin: 0 auto; margin-bottom: 25px; }
 @media only screen and (max-width: 980px) { .main .description { width: 100%; } }
@@ -124,7 +128,8 @@ nav ul li a { color: #ffffff; }
   .nav ul { width: 153px; padding: 5px 0; position: absolute; top: 0; left: 0; margin-top: -8px; background: #009688; z-index: 20; }
   .nav li { display: none; /* hide all <li> items */ margin: 0; }
   .nav .current { display: block /* show only current <li> item */ }
-  .nav a { display: block; padding: 5px 5px 5px 5px; text-align: center; }
+  .nav a { color: #ffffff !important; display: block; padding: 5px 5px 5px 5px; text-align: center; }
+  .nav a:hover { border-bottom: 2px solid #ffffff !important; }
   /* on nav hover */
   .nav ul:hover { background-image: none; }
   .nav ul:hover li { display: block; margin: 0 0 5px; }
@@ -135,6 +140,7 @@ nav ul li a { color: #ffffff; }
 @media only screen and (max-width: 450px) { .nav ul { margin-left: 0; } }
 .logo { width: 250px; height: 80px; background-image: url(../images/logo.png); background-size: 100%; }
 @media only screen and (max-width: 450px) { .logo { width: 125px; height: 40px; margin-top: 14px; } }
+.logo.logo-black { background-image: url(../images/logo-black.png); }
 
 .title { text-align: center; margin-bottom: 25px; }
 
@@ -245,3 +251,7 @@ input:checked ~ .modal__overlay { opacity: 1; visibility: visible; -webkit-trans
 input:focus + label { -webkit-transform: scale(0.97); -ms-transform: scale(0.97); transform: scale(0.97); }
 
 @media only screen and (max-width: 980px) { .advsrs .col-4-12 { width: 100%; } }
+
+.press-logos { margin-top: 100px; margin-bottom: 50px; }
+.press-logos img { width: 80%; display: block; margin: 0 auto; }
+@media only screen and (max-width: 450px) { .press-logos .col-3-12 { width: 50% !important; } }
