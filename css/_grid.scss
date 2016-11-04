@@ -9,6 +9,9 @@
     @if $media == smm {
         @media only screen and (max-width: $smm){ @content; }
     }
+    @else {
+        @media only screen and (max-width: $media){ @content; }
+    }
 }
 
 .col-1-12, .col-2-12, .col-3-12, .col-4-12, .col-5-12, .col-6-12, .col-7-12, .col-8-12, .col-9-12, .col-10-12, .col-11-12, .col-full {

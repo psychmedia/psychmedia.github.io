@@ -300,6 +300,24 @@ nav {
 	}
 }
 
+.badge-finalists {
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	position: absolute;
+	left: 25px;
+    top: 45px;
+	z-index: 1;
+    background-repeat: no-repeat;
+	background-image: url(#{$imgs}MF_2016_fnl.png);
+	@include respond-to(1260px) {
+		width: 50px;
+		height: 50px;
+		top: 10px;
+		background-size: 50px 50px;
+	}
+}
+
 .title {
 	text-align: center;
 	margin-bottom: $row-height / 2;
